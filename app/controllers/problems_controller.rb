@@ -2,12 +2,16 @@ class ProblemsController  < ApplicationController
   def num_1
     #=== Instructions ======================
     # Create a condition that sets @result equal to
-    # "true" if number is greater than 11 and false
+    # "true" if number is greater than 11 and "false"
     # otherwise
     #==================================
     number = 23
+    if number > 11
+        @result = "true"
+    else
+        @result = "false"
+    end
 
-    @result = "replace this string with your answer"
     render 'problem'
   end
 
@@ -18,8 +22,12 @@ class ProblemsController  < ApplicationController
     # "not instructor" otherwise
     #==================================
     name = "Bob"
+    if name = "Arjun"
+        @result = "instructor"
+    else
+        @result = "not instructor"
+    end
 
-    @result = "replace this string with your answer"
     render 'problem'
   end
 
@@ -31,8 +39,12 @@ class ProblemsController  < ApplicationController
     # for all other cases
     #==================================
     money = 73000
+    if money > 75000
+        @result = "no further effect on happiness"
+    else
+        @result = "some effect on happiness"
+    end
 
-    @result = "replace this string with your answer"
     render 'problem'
   end
 
@@ -43,9 +55,15 @@ class ProblemsController  < ApplicationController
     # "the worst" if activity is equal to "cleaning" and
     # "meh" for all other cases
     #==================================
-    activity = "cleaning"
+    activity = "eating"
+    if activity == "napping"
+        @result = "the best"
+    elsif activity == "cleaning"
+        @result = "the worst"
+    else
+        @result = "meh"
+    end
 
-    @result = "replace this string with your answer"
     render 'problem'
   end
 
@@ -56,8 +74,14 @@ class ProblemsController  < ApplicationController
     # 79 and "C" for all other cases
     #==================================
     score = 82
+    if score > 89
+        @result = "A"
+    elsif score > 79
+        @result = "B"
+    else
+        @result = "D"
+    end
 
-    @result = "replace this string with your answer"
     render 'problem'
   end
 
@@ -70,8 +94,16 @@ class ProblemsController  < ApplicationController
     # "heart attack" if food equals "cake shake"
     #==================================
     food = "cake shake"
+    if food == "fruits"
+        @result = "healthy"
+    elsif food == "vegetables"
+        @result = "healthy"
+    elsif food == "Lucky Charms"
+        @result = "unhealthy"
+    elsif food == "cake shake"
+        @result = "heart attack"
+    end
 
-    @result = "replace this string with your answer"
     render 'problem'
   end
 
